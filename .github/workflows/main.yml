@@ -1,3 +1,4 @@
+name: CI
 on:
   push:
     branches: [master]
@@ -8,8 +9,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: rum make command
-      run: make test_hello
+      - uses: actions/checkout@v2
+      - name: rum make command
+        run: make hello
+
+
 
   
